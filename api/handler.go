@@ -638,7 +638,7 @@ func handleStreamRequest(c *gin.Context, augmentReq AugmentRequest, model string
 	req.Header.Set("Content-Length", fmt.Sprintf("%d", len(jsonData)))
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Authorization", "Bearer "+token)
-	req.Header.Set("User-Agent", "augment.intellij/0.184.0 (Mac OS X; aarch64; 15.2) WebStorm/2024.3.5")
+	req.Header.Set("User-Agent", "Augment.vscode-augment/0.482.1")
 	req.Header.Set("x-api-version", "2")
 
 	// 生成请求ID和会话ID
@@ -689,7 +689,7 @@ func handleStreamRequest(c *gin.Context, augmentReq AugmentRequest, model string
 		req.Header.Set("Content-Length", fmt.Sprintf("%d", len(jsonData)))
 		req.Header.Set("Content-Type", "application/json")
 		req.Header.Set("Authorization", "Bearer "+token)
-		req.Header.Set("User-Agent", "augment.intellij/0.184.0 (Mac OS X; aarch64; 15.2) WebStorm/2024.3.5")
+		req.Header.Set("User-Agent", "Augment.vscode-augment/0.482.1")
 		req.Header.Set("x-api-version", "2")
 		req.Header.Set("x-request-id", requestID)
 		req.Header.Set("x-request-session-id", sessionID)
@@ -765,7 +765,7 @@ func handleStreamRequest(c *gin.Context, augmentReq AugmentRequest, model string
 				req.Header.Set("Content-Length", fmt.Sprintf("%d", len(jsonData)))
 				req.Header.Set("Content-Type", "application/json")
 				req.Header.Set("Authorization", "Bearer "+token)
-				req.Header.Set("User-Agent", "augment.intellij/0.184.0 (Mac OS X; aarch64; 15.2) WebStorm/2024.3.5")
+				req.Header.Set("User-Agent", "Augment.vscode-augment/0.482.1")
 				req.Header.Set("x-api-version", "2")
 				req.Header.Set("x-request-id", requestID)
 				req.Header.Set("x-request-session-id", sessionID)
@@ -902,7 +902,7 @@ func handleStreamRequest(c *gin.Context, augmentReq AugmentRequest, model string
 		req.Header.Set("Content-Length", fmt.Sprintf("%d", len(jsonData)))
 		req.Header.Set("Content-Type", "application/json")
 		req.Header.Set("Authorization", "Bearer "+token)
-		req.Header.Set("User-Agent", "augment.intellij/0.184.0 (Mac OS X; aarch64; 15.2) WebStorm/2024.3.5")
+		req.Header.Set("User-Agent", "Augment.vscode-augment/0.482.1")
 		req.Header.Set("x-api-version", "2")
 		req.Header.Set("x-request-id", requestID)
 		req.Header.Set("x-request-session-id", sessionID)
@@ -1087,7 +1087,7 @@ func handleNonStreamRequest(c *gin.Context, augmentReq AugmentRequest, model str
 	req.Header.Set("Content-Length", fmt.Sprintf("%d", len(jsonData)))
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Authorization", "Bearer "+token)
-	req.Header.Set("User-Agent", "augment.intellij/0.184.0 (Mac OS X; aarch64; 15.2) WebStorm/2024.3.5")
+	req.Header.Set("User-Agent", "Augment.vscode-augment/0.482.1")
 	req.Header.Set("x-api-version", "2")
 
 	// 生成请求ID和会话ID
@@ -1333,7 +1333,7 @@ func asyncRecordSessionEvent(token, tenantURL, requestID, sessionID string) {
 		req.Header.Set("Content-Length", fmt.Sprintf("%d", len(jsonData)))
 		req.Header.Set("Content-Type", "application/json")
 		req.Header.Set("Authorization", "Bearer "+token)
-		req.Header.Set("User-Agent", "augment.intellij/0.184.0 (Mac OS X; aarch64; 15.2) WebStorm/2024.3.5")
+		req.Header.Set("User-Agent", "Augment.vscode-augment/0.482.1")
 		req.Header.Set("x-api-version", "2")
 		req.Header.Set("x-request-id", requestID)
 		req.Header.Set("x-request-session-id", sessionID)
