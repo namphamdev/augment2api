@@ -241,7 +241,7 @@ func generatePath() string {
 func convertToAugmentRequest(req OpenAIRequest) AugmentRequest {
 	// 确定模式和其他参数基于模型名称
 	mode := "CHAT" // 默认使用CHAT模式
-	userGuideLines := "must answer in Chinese."
+	userGuideLines := ""
 	includeToolDefinitions := false
 	includeDefaultPrompt := false
 
@@ -255,7 +255,7 @@ func convertToAugmentRequest(req OpenAIRequest) AugmentRequest {
 	} else if strings.HasSuffix(modelLower, "-agent") {
 		// 使用AGENT模式
 		mode = "AGENT"
-		userGuideLines = "Answer in Chinese, do not use any tools, and for questions involving internet searches, please answer based on your existing knowledge."
+		userGuideLines = "Do not use any tools, and for questions involving internet searches, please answer based on your existing knowledge."
 		includeToolDefinitions = true
 		includeDefaultPrompt = true
 	}
@@ -667,7 +667,7 @@ func handleStreamRequest(c *gin.Context, augmentReq AugmentRequest, model string
 
 		// 切换到CHAT模式
 		augmentReq.Mode = "CHAT"
-		augmentReq.UserGuideLines = "使用中文回答"
+		augmentReq.UserGuideLines = ""
 		augmentReq.ToolDefinitions = []ToolDefinition{}
 
 		// 重新准备请求数据
@@ -743,7 +743,7 @@ func handleStreamRequest(c *gin.Context, augmentReq AugmentRequest, model string
 				}).Info("切换到CHAT模式")
 
 				augmentReq.Mode = "CHAT"
-				augmentReq.UserGuideLines = "使用中文回答"
+				augmentReq.UserGuideLines = ""
 				augmentReq.ToolDefinitions = []ToolDefinition{}
 
 				// 重新准备请求数据
@@ -880,7 +880,7 @@ func handleStreamRequest(c *gin.Context, augmentReq AugmentRequest, model string
 
 		// 切换到CHAT模式
 		augmentReq.Mode = "CHAT"
-		augmentReq.UserGuideLines = "使用中文回答"
+		augmentReq.UserGuideLines = ""
 		augmentReq.ToolDefinitions = []ToolDefinition{}
 
 		// 重新准备请求数据
